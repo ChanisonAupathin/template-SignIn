@@ -1,6 +1,3 @@
-# template-signin
-Template-signin whith Bootstrap v.4
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +11,7 @@ Template-signin whith Bootstrap v.4
      <!-- Bootstrap CSS -->
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-     <title>Template-Signin</title>
+     <title>Template-Signup</title>
     <link href="../css/bootstrap.min.css" rel="stylesheet">
 	<script src="../js/jquery.min.js"></script>
 	<script src="../js/popper.min.js"></script>
@@ -23,66 +20,108 @@ Template-signin whith Bootstrap v.4
 </head>
 
 <style>
-    <.form-signin>
-        html , body {
-            height: 100%;
-        }
-        body{
-            background-color: #F5F5F5;
-        }
-        .form-signin{
-            widows: 100%;
-            max-width: 330px;
-            padding:15px;
-            margin:auto;
-        }
-        .form-signin .form-control{
-            position: relative;
-            height: auto;
-            padding:10px;
-            font-size: 16px;
-        }
-        .form-signin:focus{
-            z-index: 2;
-        }
-        #inputEmail{
-            border-bottom-left-radius: 1;  /*radius: 0; = ไม่โค้ง  */
-            border-bottom-right-radius: 1;
-            margin-bottom: -1px;
-        }
-        #inputPassword{
-            border-top-left-radius: 1;
-            border-top-right-radius: 1;
-        }
-    </style>
-    <body   class="d-flex  align-self-center text-center" >
-        <form action="#" class="form-signin">
-            <img src="img/login.svg" alt="LOGIN" class="mt-3" width="72" height="72">
-            <h1 class="h3 mb-3 mt-3 font-weight-normal">Please Sign</h1>
-            <input type="email" name="" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-            <input type="password" name="" id="inputPassword" class="form-control" placeholder="Password" required>
+   html , body{
+       height: 100%;
+   }
 
+   body{
+       background-color: #F5F5F5;
+   }
 
-            <div class="custom-control custom-checkbox m-3 ">
-                <input type="checkbox" name="" id="check1" class="custom-control-input" value="remember-me" checked>
-                <label for="check1" class="custom-control-label">Remember me</label>
+   .form-signup{
+       width: 100%;
+       max-width: 50%;
+       padding:50px;
+       margin: auto;
+   }
+
+   .form-signup .form-group .form-control{
+        position: relative;
+        height: auto;
+        padding:10px;
+        font-size: 16px;
+   }
+   
+   .form-signup:focus{
+       z-index: 2;
+   }
+
+   #input{
+    border-bottom-left-radius:1 ;
+    border-bottom-right-radius: 1;
+    margin-bottom: -1;
+   
+   }
+  
+   img{
+       padding:auto;
+       margin: auto;
+   }
+
+   #txtlogo{
+       font-weight: bold;
+       text-align: center;
+       font-family:monospace;
+       color: #e0a38b;
+       
+       
+   }
+
+</style>
+    
+    <body class="d-flxe align-self-center">
+        <form action="#" class="form-signup form-row">
+            <img src="img/register.svg" class="mt-4" alt="" width="80px" height="80px">
+
+            <div class="col-md-12 mt-4 display-4 " id="txtlogo">Sign Up</div>
+
+            <div class="form-group col-md-12 mt-4">
+                <label for="fullname">FullName</label>
+                <input type="text" name="" id="inputfullname" class="form-control" placeholder="Fullname" required>
             </div>
-
-            <button type="submit" class="btn btn-lg btn-primary btn-block">Sign In</button>
-            <p class="mt-3 mb-3 text-muted">&copy;2020 - 2030 </p>
-
+            <div class="form-group col-md-4">
+                <label for="Username">Username</label>
+                <input type="text" name="" id="inputUsername" class="form-control" placeholder="Username" required>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="Password">Password</label>
+                <input type="password" name="" id="inputPassword" class="form-control" placeholder="Password" required>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="Password">Confirm Password</label>
+                <input type="password" name="" id="inputRepeatpass" class="form-control" placeholder="Confirm Password" required>
+            </div>
+            <div class="form-group col-md-12">
+                <label for="Address">address</label>
+                <input type="text" name="" id="inputaddress" class="form-control" placeholder="123/4 M.4" required>
+            </div>
+            <div class="form-group col-md-12">
+                <label for="Gmail" >Gmail</label>
+                <input type="email" name="" id="inputgmail" class="form-control" placeholder="abc@gmail.com" required>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="City">City</label>
+                <input type="text" name="" id="inputCity" class="form-control " placeholder="Bangkok" required>
+            </div>
+            <div class="form-group col-md-4">
+               <label for="State" required>State</label>
+               <select name="" id="State" class="form-control" >
+                   <option selected class="form-control">Choose...</option>
+               </select>
+            </div>  
+            <div class="form-group col-md-4">
+                <label for="zip">Zip</label>
+                <input type="text" name="" id="zip" class="form-control" placeholder="10230" required>
+            </div> 
+            <div class="form-group col-md-4 mt-4">
+                 <button class="btn btn-block btn-lg btn-outline-primary">CREATE ACCOUNT</button> 
+            </div>
+            <div class="form-group col-md-4 mt-4">
+                <button type="reset" class="btn btn-block btn-lg btn-outline-warning">Reset</button>
+            </div>
+            <div class="form-group col-md-4 mt-4">
+                <button type="button" class="btn btn-block btn-lg btn-outline-danger">Cancel</button>
+            </div>
         </form>
-
-        
-      
-        
-
-        
-    </body>
-
-
-
-    
-          
-    
+    </body>    
 </html>
